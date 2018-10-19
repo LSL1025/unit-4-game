@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///Users/luistorres/Desktop/cristals/Crist.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="file:///Users/luistorres/Desktop/cristals/boot.css">
+    <link rel="stylesheet" href="./∫_files/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-xs-12 col-md-12 col-lg-6">
+        <span class="navbar-brand mb-0 h1">
+            <h2>Crystal Colector!</h2>
+        </span>
+    </div>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+
+                <p>You wuill be given a random number at the start of the game.</p>
+                <p>There are for crystal below. By clicking on a crystals you will be add a specific amount of poins to your total score.</p>
+                <p>You win the game by matching your total score by the random number, you lose the game if your total score goes about the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+    
+             <div class="col-md-12">
+                    <p>Number to Guess: <span id="number-to-guess">50</span></p>
+             </div>
+    </div>
+    
+
+    <div class="row">
+
+
+        <div class="col-xs-6 col-lg-2" id="crystals">
+
+          <img class="crystal" id="green" src="./∫_files/images.jpeg" alt="crystals">
+         
+        </div>
+        <div class="col-xs-6 col-lg-3" id="crystals">
+
+             <img class="crystal" src="./∫_files/images-1.jpeg" alt="crystals">
+
+        </div>
+    
+        <div class="col-xs-6 col-lg-3" id="crystals">
+
+            <img class="crystal" src="./∫_files/images-3.jpeg" alt="crystals">
+
+        </div>  
+
+
+        <div class="col-xs-6 col-lg-3" id="crystals">
+
+             <img class="crystal" src="./∫_files/images-2.jpeg" alt="crystals">
+    
+         </div>  
+            
+        
+    </div>
+    
+            
+              <!-- JAVASCRIPT  -->
+              <!-- ========================================= -->
+        <script type="text/javascript" src="./∫_files/jquery.min.js"></script>
+            
+        <script type="text/javascript">
+
+              var targetNumber = 50;
+
+              $("#number-to-guess").text(targetNumber);
+
+              var counter = 0;
+
+              $(".crystal").on("click", function() {
+                var counter = Math.floor(Math.random() * 50) + 1;
+                
+                counter += 10;
+            
+                
+                alert("Your new score is: " + counter);
+            
+                if (counter === targetNumber) {
+
+                alert("You win!");
+                }
+
+            
+                else if (counter >= targetNumber) {
+
+                
+                alert("You lose!!");
+                }
+            });
+            
+        </script>
+    
+
+</body></html>

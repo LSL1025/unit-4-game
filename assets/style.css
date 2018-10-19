@@ -1,0 +1,31 @@
+
+body { 
+    background-color: burlywood;
+}
+
+#title {
+
+    background-color: aqua;
+    height: 100px;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background-color: bisque;
+    width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+
+
+}
+
+#crystalContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
